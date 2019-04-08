@@ -1,4 +1,5 @@
 #!/bin/bash
 
 BIN_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$BIN_DIR/../arm-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/pkgconfig/
 pkg-config --define-variable=prefix=$BIN_DIR/../arm-linux-gnueabihf/sysroot/usr/ "$@"
