@@ -1,0 +1,10 @@
+prefix=/usr
+Name: libpq
+Description: PostgreSQL libpq library
+Url: http://www.postgresql.org/
+Version: 9.6.11
+Requires: 
+Requires.private: 
+Cflags: -I${prefix}/include/postgresql
+Libs: -L${prefix}/lib/arm-linux-gnueabihf -lpq
+Libs.private: -L${prefix}/lib/arm-linux-gnueabihf/mit-krb5 -L${prefix}/lib/mit-krb5 -lssl -lcrypto -lgssapi_krb5 -lcrypt -lldap_r
